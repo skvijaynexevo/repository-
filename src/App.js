@@ -255,7 +255,7 @@ class App extends React.Component {
 
     return( 
  
-<HashRouter>
+<BrowserRouter>
 <UserContext.Provider > 
   <Switch>
     <PublicRoute restricted={true} path="/login" component={Login}exact />
@@ -298,7 +298,7 @@ class App extends React.Component {
   </Switch>
 </UserContext.Provider>
 
-</HashRouter>
+</BrowserRouter>
 
 
 );

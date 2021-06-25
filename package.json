@@ -1,7 +1,6 @@
 {
   "name": "navbar-dropdown-v1",
-  "version": "0.1.0",
-  "homepage": "http://demo-nexevo.in/vijay/abctestdfetest/",
+  "version": "0.1.0", 
   "private": true,
   "dependencies": {
     "@lyket/react": "^1.4.2",

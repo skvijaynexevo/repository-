@@ -1,0 +1,59 @@
+footer.page-footer.example {
+    background: #3b88ff;
+    padding: 15px;
+    color: #fff;
+} 
+.MuiGrid-container h5{
+    padding: 20px 0;
+    color: #fff !important;
+}
+.MuiGrid-container li{
+    padding: 10px 0;
+    display: block;
+}
+ 
+.makeStyles-root-11 { 
+    background: black;
+}
+.makeStyles-paper-12 {
+    color: #A6A6A7 !important;
+    padding: 16px;
+    background: black !important;
+}
+.MuiGrid-container{
+    width : 100% !important;
+    margin : auto;
+} 
+
+
+@media (max-width: 575px){
+
+}
+ 
+@media (min-width: 576px) and (max-width: 767px) { 
+    .MuiGrid-container{
+        width : 576px !important;
+        margin : auto;
+    } 
+}
+
+@media (min-width: 768px) and (max-width: 991px) { 
+    .MuiGrid-container{
+        width : 768px !important;
+        margin : auto;
+    } 
+}
+
+@media (min-width: 992px) and (max-width: 1199px) { 
+    .MuiGrid-container{
+        width : 992px !important;
+        margin : auto;
+    } 
+}
+ 
+@media only screen and (min-width: 1200px){  
+    .MuiGrid-container{
+        width : 1140px !important;
+        margin : auto;
+    } 
+ }

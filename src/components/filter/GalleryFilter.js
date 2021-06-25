@@ -36,7 +36,7 @@ import Avatar from '@material-ui/core/Avatar';
 import { logout, isLogin ,login ,getRefreshToken } from '../../middleware/auth';   
 
 
-const API_URL = 'http://localhost:1080/auth-app/public/api/auth';
+const API_URL = 'http://demo-nexevo.in/dn-auth-app/auth-app/public/api/auth';
 
 function handleClick() {
   var v = document.getElementById("FilterDropdowns");
@@ -180,7 +180,7 @@ class GalleryFilter extends React.Component {
             } 
           }   
 
-        axios.post(`http://localhost:1080/auth-app/public/api/homepagelistingfillter?type=${type}`, config)
+        axios.post(`http://demo-nexevo.in/dn-auth-app/auth-app/public/api/homepagelistingfillter?type=${type}`, config)
         .then(response => response.data)
             .then(data => {
                 this.setState({ listing: data })
@@ -200,7 +200,7 @@ class GalleryFilter extends React.Component {
         }
       }
 
-    axios.post('http://localhost:1080/auth-app/public/api/homepagelistingfillter', {
+    axios.post('http://demo-nexevo.in/dn-auth-app/auth-app/public/api/homepagelistingfillter', {
       timeframe: timeframe, 
       keywords:keywords,  
       type:type,
@@ -222,7 +222,7 @@ class GalleryFilter extends React.Component {
     //     }
     // }
     
-    // axios.get(`http://localhost:1080/auth-app/public/api/homepagelistingfillter?type=${this.state.all_id}`, config).then(response => response.data)
+    // axios.get(`http://demo-nexevo.in/dn-auth-app/auth-app/public/api/homepagelistingfillter?type=${this.state.all_id}`, config).then(response => response.data)
     //     .then(data => {
     //         this.setState({ listing: data })
     //     },
@@ -243,7 +243,7 @@ class GalleryFilter extends React.Component {
     }  
     switch(id) {
       case 5: 
-      axios.get(`http://localhost:1080/auth-app/public/api/listingall`, config).then(response => response.data)
+      axios.get(`http://demo-nexevo.in/dn-auth-app/auth-app/public/api/listingall`, config).then(response => response.data)
       .then(data => {
           this.setState({ listing: data })
       },
@@ -251,7 +251,7 @@ class GalleryFilter extends React.Component {
           })  
         break; 
       default:
-        axios.get(`http://localhost:1080/auth-app/public/api/categorylisting/${id}`, config).then(response => response.data)
+        axios.get(`http://demo-nexevo.in/dn-auth-app/auth-app/public/api/categorylisting/${id}`, config).then(response => response.data)
           .then(data => {
               this.setState({ listing: data })
           },
@@ -273,7 +273,7 @@ class GalleryFilter extends React.Component {
     //     }
     // }
     
-    //   axios.get(`http://localhost:1080/auth-app/public/api/homepagelistingfillter?timeframe=${e.target.value}&type=${e.target.id}`, config).then(response => response.data)
+    //   axios.get(`http://demo-nexevo.in/dn-auth-app/auth-app/public/api/homepagelistingfillter?timeframe=${e.target.value}&type=${e.target.id}`, config).then(response => response.data)
     //       .then(data => {
     //           this.setState({ listing: data })
     //       },
@@ -291,14 +291,14 @@ class GalleryFilter extends React.Component {
         const token = localStorage.getItem('access_token'); 
         this.setState({userlogin: token})
  
-      const urls = `http://localhost:1080/auth-app/public/api/posttitle`; 
+      const urls = `http://demo-nexevo.in/dn-auth-app/auth-app/public/api/posttitle`; 
         const config = {
             headers: {
                 Authorization: 'Bearer ' + localStorage.getItem('access_token')
             }
         } 
         this.setState({ loading: true }) 
-        axios.get(`http://localhost:1080/auth-app/public/api/homepagelisting`, config).then(response => response.data)
+        axios.get(`http://demo-nexevo.in/dn-auth-app/auth-app/public/api/homepagelisting`, config).then(response => response.data)
             .then(data => {
                 this.setState({ listing: data })  
             },
@@ -310,7 +310,7 @@ class GalleryFilter extends React.Component {
                   this.setState({ loading: false })    
                  })
 
-                 axios.get('http://localhost:1080/auth-app/public/api/auth/user', config)
+                 axios.get('http://demo-nexevo.in/dn-auth-app/auth-app/public/api/auth/user', config)
                  .then(res => { 
                   this.setState({ users: res.data , usersid: res.data.id })
                  },

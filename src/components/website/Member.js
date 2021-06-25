@@ -22,7 +22,7 @@ import nofoundresult from '../images/noresultfound.svg'
 import Skeleton from 'react-loading-skeleton';
 import viewJobMobileImg from '../images/viewjob_mobile.svg'
 import DroneImg from '../images/drone-img.svg'
-const API_URL = 'http://localhost:1080/auth-app/public/api/auth';
+const API_URL = 'http://demo-nexevo.in/dn-auth-app/auth-app/public/api/auth';
 
 class Member extends  React.Component {
   constructor(props) {

@@ -42,7 +42,7 @@ class FollowBtn extends React.Component {
       }
     ) 
 
-      axios.post('http://localhost:1080/auth-app/public/api/auth/followcheck',{
+      axios.post('http://demo-nexevo.in/dn-auth-app/auth-app/public/api/auth/followcheck',{
       user_id:this.state.userId,
       }, config)
         .then(res => { 
@@ -76,7 +76,7 @@ class FollowBtn extends React.Component {
           Authorization: 'Bearer ' + localStorage.getItem('access_token')
         }
       }
-      axios.post('http://localhost:1080/auth-app/public/api/auth/follow',{
+      axios.post('http://demo-nexevo.in/dn-auth-app/auth-app/public/api/auth/follow',{
       user_id:this.state.userId,
       }, config)
         .then(res => { 

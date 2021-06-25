@@ -33,7 +33,7 @@ import { useParams } from "react-router-dom";
 import swal from 'sweetalert';
 
 
-const API_URL = 'http://localhost:1080/auth-app/public/api/auth';
+const API_URL = 'http://demo-nexevo.in/dn-auth-app/auth-app/public/api/auth';
 
 
 const emails = ['Stephen Raj', 'Vijay'];
@@ -118,7 +118,7 @@ const config = {
   }
 }
 
-axios.get('http://localhost:1080/auth-app/public/api/auth/user', config)
+axios.get('http://demo-nexevo.in/dn-auth-app/auth-app/public/api/auth/user', config)
 .then(res => { 
   Setuser(res.data);  
 },
@@ -128,7 +128,7 @@ axios.get('http://localhost:1080/auth-app/public/api/auth/user', config)
 )   
  
  
-axios.get(`http://localhost:1080/auth-app/public/api/auth/${slug}/download?user_id=${userId}`, config)
+axios.get(`http://demo-nexevo.in/dn-auth-app/auth-app/public/api/auth/${slug}/download?user_id=${userId}`, config)
 .then(res => { 
   setCart(res.data);  
 },
@@ -149,7 +149,7 @@ if (!res) {
     return;
 }
 
-const result = await axios.get(`http://localhost:1080/auth-app/public/api/auth/${slug}/download?user_id=${userId}`);
+const result = await axios.get(`http://demo-nexevo.in/dn-auth-app/auth-app/public/api/auth/${slug}/download?user_id=${userId}`);
 
 if (!result) {
     alert("Server error. Are you online?");
@@ -180,7 +180,7 @@ const options = {
           headers: {
               Authorization: 'Bearer ' + localStorage.getItem('access_token')
           }}
-        const result = await axios.post("http://localhost:1080/auth-app/public/api/auth/downloadpayment", data)
+        const result = await axios.post("http://demo-nexevo.in/dn-auth-app/auth-app/public/api/auth/downloadpayment", data)
         .then(res => res.data)
               .then((data) => {
                 swal("Download Sucessfull", {

@@ -1,5 +1,5 @@
 import axios from 'axios';
-const API_URL = 'http://localhost:1080/auth-app/public/api/auth';
+const API_URL = 'http://demo-nexevo.in/dn-auth-app/auth-app/public/api/auth';
  const config = {
           headers: {
             Authorization: 'Bearer ' + localStorage.getItem('access_token')

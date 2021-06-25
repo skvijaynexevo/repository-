@@ -39,7 +39,7 @@ export default class MyJobs extends React.Component {
         }
       }
 
-    const url = `http://localhost:1080/auth-app/public/api/auth/myjobs`;
+    const url = `http://demo-nexevo.in/dn-auth-app/auth-app/public/api/auth/myjobs`;
     axios.get(url,config).then(response => response.data)
     .then((data) => {
       this.setState({ myjobs: data }) 
@@ -61,7 +61,7 @@ export default class MyJobs extends React.Component {
                 Authorization: 'Bearer ' + localStorage.getItem('access_token')
             }
         }
-        const url = `http://localhost:1080/auth-app/public/api/auth/deletemyjob/${id}`;
+        const url = `http://demo-nexevo.in/dn-auth-app/auth-app/public/api/auth/deletemyjob/${id}`;
         axios.get(url, config).then(response => {  
               const myjobs = this.state.myjobs.filter(item => item.id !== id);
               this.setState({ myjobs });   

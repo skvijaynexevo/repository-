@@ -39,7 +39,7 @@ export default class HiringDorners extends React.Component {
         }
       }
 
-    const url = `http://localhost:1080/auth-app/public/api/auth/dronerhired`;
+    const url = `http://demo-nexevo.in/dn-auth-app/auth-app/public/api/auth/dronerhired`;
     axios.get(url,config).then(response => response.data)
     .then((data) => {
       this.setState({ dronerhired: data }) 
@@ -61,7 +61,7 @@ export default class HiringDorners extends React.Component {
                 Authorization: 'Bearer ' + localStorage.getItem('access_token')
             }
         }
-        const url = `http://localhost:1080/auth-app/public/api/auth/deletehired/${id}`;
+        const url = `http://demo-nexevo.in/dn-auth-app/auth-app/public/api/auth/deletehired/${id}`;
         axios.get(url, config).then(response => {  
               const dronerhired = this.state.dronerhired.filter(item => item.id !== id);
               this.setState({ dronerhired });   

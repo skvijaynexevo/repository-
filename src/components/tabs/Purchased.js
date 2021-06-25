@@ -16,7 +16,7 @@ import DroneImg from '../images/drone-img.svg'
 import FileSaver from "file-saver"; 
 import nofoundresult from '../images/noresultfound.svg' 
 
-const API_URL = 'http://localhost:1080/auth-app/public/api/auth';
+const API_URL = 'http://demo-nexevo.in/dn-auth-app/auth-app/public/api/auth';
 
 var videos = document.querySelectorAll(".thumbnail");
 for (var i = 0; i < videos.length; i++) {
@@ -93,7 +93,7 @@ export default class Purchased extends React.Component {
             }, 
         }     
 
-        axios.get(`http://localhost:1080/auth-app/public/api/auth/download/${event}`,config)
+        axios.get(`http://demo-nexevo.in/dn-auth-app/auth-app/public/api/auth/download/${event}`,config)
         .then((response) => {   
         var img = new Image;
         img.onload = function() {

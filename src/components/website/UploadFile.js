@@ -160,7 +160,7 @@ import {
                         Authorization: 'Bearer ' + localStorage.getItem('access_token')
                       }
                     }
-                    axios.post("http://localhost:1080/auth-app/public/api/auth/post", data, config, {
+                    axios.post("http://demo-nexevo.in/dn-auth-app/auth-app/public/api/auth/post", data, config, {
                     })
                       .then(res => {
                         swal(res.data.message, {
@@ -197,7 +197,7 @@ import {
                       Authorization: 'Bearer ' + localStorage.getItem('access_token')
                     }
                   }
-                  axios.post("http://localhost:1080/auth-app/public/api/auth/post", data, config, {
+                  axios.post("http://demo-nexevo.in/dn-auth-app/auth-app/public/api/auth/post", data, config, {
                   })
                     .then(res => {
                       swal(res.data.message, {

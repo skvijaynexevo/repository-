@@ -61,7 +61,7 @@ function Company() {
   const history = useHistory();
   const onSubmit = (event) => { 
     setLoading(true);  
-    axios.post('http://localhost:1080/auth-app/public/api/auth/registerhirer', {
+    axios.post('http://demo-nexevo.in/dn-auth-app/auth-app/public/api/auth/registerhirer', {
       company_name: event.companyname,
       profession: event.profession,
               location: region,

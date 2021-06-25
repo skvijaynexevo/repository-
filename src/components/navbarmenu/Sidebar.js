@@ -122,14 +122,14 @@ export default function PersistentDrawerLeft(props) {
       }
     }
     
-    axios.get('http://localhost:1080/auth-app/public/api/auth/user', config)
+    axios.get('http://demo-nexevo.in/dn-auth-app/auth-app/public/api/auth/user', config)
       .then(res => {
         Setuser(res.data);  
       },
         err => { 
         }
       )  
-          axios.get('http://localhost:1080/auth-app/public/api/auth/profile', config)
+          axios.get('http://demo-nexevo.in/dn-auth-app/auth-app/public/api/auth/profile', config)
       .then(res => {
         Setuser(res.data);  
       },

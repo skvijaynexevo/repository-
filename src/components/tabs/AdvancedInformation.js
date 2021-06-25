@@ -57,7 +57,7 @@ export default function AdvancedInformation() {
               Authorization: 'Bearer ' + localStorage.getItem('access_token')
             }
           }
-          axios.post('http://localhost:1080/auth-app/public/api/auth/accountsettings', {
+          axios.post('http://demo-nexevo.in/dn-auth-app/auth-app/public/api/auth/accountsettings', {
             name: event.name,
             company_website: event.company_website, 
           },config) 

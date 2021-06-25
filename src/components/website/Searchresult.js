@@ -24,7 +24,7 @@ import Favorite from '@material-ui/icons/Favorite';
 
 
 const race = ['shots', 'members', 'company'];
-const API_URL = 'http://localhost:1080/auth-app/public/api/auth';
+const API_URL = 'http://demo-nexevo.in/dn-auth-app/auth-app/public/api/auth';
 
 export default class Searchresult extends React.Component {
 

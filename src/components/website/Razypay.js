@@ -26,7 +26,7 @@ function Razypay() {
             return;
         }
 
-        const result = await axios.get(`http://localhost:1080/auth-app/sdfdf-74/download?user_id=9`,{
+        const result = await axios.get(`http://demo-nexevo.in/dn-auth-app/auth-app/sdfdf-74/download?user_id=9`,{
             
         });
 
@@ -57,7 +57,7 @@ function Razypay() {
                 }; 
  
 
-                const result = await axios.post("http://localhost:1080/auth-app/payment", data);
+                const result = await axios.post("http://demo-nexevo.in/dn-auth-app/auth-app/payment", data);
  
             },
             prefill: {

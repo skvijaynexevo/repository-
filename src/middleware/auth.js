@@ -19,7 +19,7 @@ export const authenticationService = {
 // LOGIN  s
 function login(props, d) {   
   
-  axios.post('http://localhost:1080/auth-app/public/api/auth/login', {
+  axios.post('http://demo-nexevo.in/dn-auth-app/auth-app/public/api/auth/login', {
     email: d.email,
     password: d.password
   }).then(res => {      
@@ -31,7 +31,7 @@ function login(props, d) {
         Authorization: 'Bearer ' + localStorage.getItem('access_token')
       } 
     } 
-      axios.get('http://localhost:1080/auth-app/public/api/auth/user', config)
+      axios.get('http://demo-nexevo.in/dn-auth-app/auth-app/public/api/auth/user', config)
         .then(user => {    
           // {user.data.role_id === 1 &&   
           // // window.location.replace('/vijay/abctestdfetest#/Profile');   

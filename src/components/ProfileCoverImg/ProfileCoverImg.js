@@ -98,7 +98,7 @@ class ProfileCoverImg extends React.Component {
           Authorization: 'Bearer ' + localStorage.getItem('access_token')
         }
       }
-      axios.post('http://localhost:1080/auth-app/public/api/auth/updatecover', {
+      axios.post('http://demo-nexevo.in/dn-auth-app/auth-app/public/api/auth/updatecover', {
         cover: croppedImg, 
       }, 
         config

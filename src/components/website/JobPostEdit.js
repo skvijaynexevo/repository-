@@ -43,7 +43,7 @@ export default function JobPostEdit(props) {
     const [selectedValues, setSelectedValue] = useState(); 
     
   const id =props.match.params.id;
-  const API_URL = 'http://localhost:1080/auth-app/public/api/auth';
+  const API_URL = 'http://demo-nexevo.in/dn-auth-app/auth-app/public/api/auth';
   useEffect(() => {
 
     const config = {

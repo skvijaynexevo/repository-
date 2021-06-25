@@ -22,7 +22,7 @@ export default function Otp(props) {
     password.current = watch("password", "");
     const onSubmit = (event) => {
         setLoading(true); 
-        axios.post('http://localhost:1080/auth-app/public/api/auth/password/reset', {
+        axios.post('http://demo-nexevo.in/dn-auth-app/auth-app/public/api/auth/password/reset', {
             email: props.state.email,
             code:   event.code, 
             password: event.password 

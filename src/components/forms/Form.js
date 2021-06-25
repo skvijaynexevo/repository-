@@ -38,7 +38,7 @@ const onSubmit = (event) => {
             Authorization: 'Bearer ' + localStorage.getItem('access_token')
           }
         }
-           axios.post('http://localhost:1080/auth-app/public/api/auth/post', {
+           axios.post('http://demo-nexevo.in/dn-auth-app/auth-app/public/api/auth/post', {
           // name: event.name,
           caption: event.caption,
           category_id:state,

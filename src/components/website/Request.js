@@ -18,7 +18,7 @@ import Favorite from '@material-ui/icons/Favorite';
 import { Link } from 'react-router-dom';    
 import $ from "jquery";
 
-const API_URL = 'http://localhost:1080/auth-app/public/api/auth';
+const API_URL = 'http://demo-nexevo.in/dn-auth-app/auth-app/public/api/auth';
 
 function handleClick() {
   var v = document.getElementById("FilterDropdowns");
@@ -62,7 +62,7 @@ export default class Cards extends React.Component {
             }
         }
         
-        axios.get(`http://localhost:1080/auth-app/public/api/auth/homepagelistingfillter?type=${this.state.value}`, config).then(response => response.data)
+        axios.get(`http://demo-nexevo.in/dn-auth-app/auth-app/public/api/auth/homepagelistingfillter?type=${this.state.value}`, config).then(response => response.data)
             .then(data => {
                 this.setState({ listing: data })
             },
@@ -78,7 +78,7 @@ export default class Cards extends React.Component {
             }
         }
         
-        axios.get(`http://localhost:1080/auth-app/public/api/homepagelisting`, config).then(response => response.data)
+        axios.get(`http://demo-nexevo.in/dn-auth-app/auth-app/public/api/homepagelisting`, config).then(response => response.data)
             .then(data => {
                 this.setState({ listing: data })
             },

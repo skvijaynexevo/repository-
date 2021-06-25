@@ -38,14 +38,14 @@ class CommentBox extends React.Component {
         }
       }
  
-      const urls = `http://localhost:1080/auth-app/public/api/auth/commentlisting/${nextProps.passedVal}`;
+      const urls = `http://demo-nexevo.in/dn-auth-app/auth-app/public/api/auth/commentlisting/${nextProps.passedVal}`;
       axios.get(urls, config).then(res => res.data)
           .then((data) => {
               this.setState({ comments: data }) 
           })
 
 
-      axios.get('http://localhost:1080/auth-app/public/api/auth/user', config)
+      axios.get('http://demo-nexevo.in/dn-auth-app/auth-app/public/api/auth/user', config)
       .then(res => {  
        this.setState({ user_id: res.data.id }) 
       },
@@ -125,7 +125,7 @@ class CommentBox extends React.Component {
           Authorization: 'Bearer ' + localStorage.getItem('access_token')
       }
   }   
-    axios.post('http://localhost:1080/auth-app/public/api/auth/commentstore', {
+    axios.post('http://demo-nexevo.in/dn-auth-app/auth-app/public/api/auth/commentstore', {
       body: event.body,
       user_id: props.names,
       post_id: props.post,  

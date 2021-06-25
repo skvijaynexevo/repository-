@@ -30,7 +30,7 @@ import { Player } from 'video-react';
 import FileSaver from "file-saver"; 
 import { userService } from '../_services/user.service';
  
-const API_URL = 'http://localhost:1080/auth-app/public/api/auth';
+const API_URL = 'http://demo-nexevo.in/dn-auth-app/auth-app/public/api/auth';
 
 export default class ViewJob extends React.Component {
 
@@ -77,7 +77,7 @@ export default class ViewJob extends React.Component {
                 Authorization: 'Bearer ' + localStorage.getItem('access_token')
             }
         }
-        const url = `http://localhost:1080/auth-app/public/api/auth/freedownload/${event.id}?user_id=${event.user_id}`;
+        const url = `http://demo-nexevo.in/dn-auth-app/auth-app/public/api/auth/freedownload/${event.id}?user_id=${event.user_id}`;
         axios.get(url, config).then(response => {    
               swal(response.data.message, {
                 icon: "success",
@@ -122,7 +122,7 @@ export default class ViewJob extends React.Component {
               this.setState({ imageview: data }) 
           })
 
-          const urls = `http://localhost:1080/auth-app/public/api/auth/relatedposts/${user_id}`;
+          const urls = `http://demo-nexevo.in/dn-auth-app/auth-app/public/api/auth/relatedposts/${user_id}`;
           axios.get(urls, config).then(res => res.data)
               .then((data) => {
                   this.setState({ relatedposts: data }) 

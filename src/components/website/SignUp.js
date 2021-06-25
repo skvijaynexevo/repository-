@@ -32,7 +32,7 @@ function SignUp() {
   const history = useHistory();
   const onSubmit = (event) => {
     
-    axios.post('http://localhost:1080/auth-app/public/api/auth/register', {
+    axios.post('http://demo-nexevo.in/dn-auth-app/auth-app/public/api/auth/register', {
     name: event.name,
     
     username: event.username,  

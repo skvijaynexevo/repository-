@@ -26,7 +26,7 @@ import {
 import Snackbar from '@material-ui/core/Snackbar';
 
   
-const API_URL = 'http://localhost:1080/auth-app/public/api/auth';
+const API_URL = 'http://demo-nexevo.in/dn-auth-app/auth-app/public/api/auth';
  
     class PostEdit extends React.Component {  
       constructor(props) {
@@ -247,7 +247,7 @@ const API_URL = 'http://localhost:1080/auth-app/public/api/auth';
                       Authorization: 'Bearer ' + localStorage.getItem('access_token')
                     }
                   }
-                  axios.post(`http://localhost:1080/auth-app/public/api/auth/editpost/${id}`, obj, config, {
+                  axios.post(`http://demo-nexevo.in/dn-auth-app/auth-app/public/api/auth/editpost/${id}`, obj, config, {
                   })
                     .then(res => {
                       swal(res.data.message, {

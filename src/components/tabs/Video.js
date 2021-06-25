@@ -21,7 +21,7 @@ import nofoundresult from '../images/noresultfound.svg'
 import { userService } from '../_services/user.service';
 
 
-const API_URL = 'http://localhost:1080/auth-app/public/api/auth';
+const API_URL = 'http://demo-nexevo.in/dn-auth-app/auth-app/public/api/auth';
 
 
 var videos = document.querySelectorAll(".thumbnail");
@@ -61,7 +61,7 @@ export default class Video extends React.Component {
                 Authorization: 'Bearer ' + localStorage.getItem('access_token')
             }
         }
-        axios.get(`http://localhost:1080/auth-app/public/api/auth/categorylisting/${this.state.userId}/${this.state.categories}`, config).then(response => response.data)
+        axios.get(`http://demo-nexevo.in/dn-auth-app/auth-app/public/api/auth/categorylisting/${this.state.userId}/${this.state.categories}`, config).then(response => response.data)
             .then(data => {
                 this.setState({ listing: data })
             },

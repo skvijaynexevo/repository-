@@ -12,7 +12,7 @@ import swal from 'sweetalert';
 import viewJobMobileImg from '../images/viewjob_mobile.svg'
 import { userService } from '../_services/user.service';
 
-const API_URL = 'http://localhost:1080/auth-app/public/api/auth';
+const API_URL = 'http://demo-nexevo.in/dn-auth-app/auth-app/public/api/auth';
  
 export default class ViewJob extends React.Component {
 

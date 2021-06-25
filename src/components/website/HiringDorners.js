@@ -24,7 +24,7 @@ import viewJobMobileImg from '../images/viewjob_mobile.svg'
 import DroneImg from '../images/drone-img.svg'
 import ContentLoader from 'react-content-loader'
 
-const API_URL = 'http://localhost:1080/auth-app/public/api/auth';
+const API_URL = 'http://demo-nexevo.in/dn-auth-app/auth-app/public/api/auth';
   
 export default class HiringDorners extends React.Component {
   
@@ -59,7 +59,7 @@ export default class HiringDorners extends React.Component {
         }
       }
 
-    axios.post('http://localhost:1080/auth-app/public/api/auth/hiredornersfillter', {
+    axios.post('http://demo-nexevo.in/dn-auth-app/auth-app/public/api/auth/hiredornersfillter', {
         job_title: job_title, 
         job_location:job_location, 
         job_category:job_category, 

@@ -71,7 +71,7 @@
 //         Authorization: 'Bearer ' + localStorage.getItem('access_token')
 //       }
 //     }
-//     axios.get('http://localhost:1080/auth-app/public/api/auth/user', config) 
+//     axios.get('http://demo-nexevo.in/dn-auth-app/auth-app/public/api/auth/user', config) 
 //     .then(res=>
 //       {   
 //         setAuth(true); 

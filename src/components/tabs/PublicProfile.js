@@ -60,7 +60,7 @@ const handleClose = (event, reason) => {
             Authorization: 'Bearer ' + localStorage.getItem('access_token')
           }
         }
-        axios.post('http://localhost:1080/auth-app/public/api/auth/updateprofile', {
+        axios.post('http://demo-nexevo.in/dn-auth-app/auth-app/public/api/auth/updateprofile', {
             name: event.name,
             profession: event.profession,
             bio: event.bio,

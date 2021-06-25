@@ -37,7 +37,7 @@ export default function GetJobs(props) {
                 Authorization: 'Bearer ' + localStorage.getItem('access_token')
               }
             }
-          axios.post('http://localhost:1080/auth-app/public/api/auth/postajob', {
+          axios.post('http://demo-nexevo.in/dn-auth-app/auth-app/public/api/auth/postajob', {
               job_title: event.job_title,
               job_description: event.comment,
               job_location:event.job_location,
@@ -76,7 +76,7 @@ export default function GetJobs(props) {
                 Authorization: 'Bearer ' + localStorage.getItem('access_token')
               }
             }
-          axios.post('http://localhost:1080/auth-app/public/api/auth/postajob', {
+          axios.post('http://demo-nexevo.in/dn-auth-app/auth-app/public/api/auth/postajob', {
               job_title: event.job_title,
               job_description: event.comment,
               job_location:event.job_location,

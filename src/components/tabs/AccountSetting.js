@@ -41,7 +41,7 @@ export default function AccountSetting() {
               Authorization: 'Bearer ' + localStorage.getItem('access_token')
             }
           }
-          axios.post('http://localhost:1080/auth-app/public/api/auth/accountsettings', {
+          axios.post('http://demo-nexevo.in/dn-auth-app/auth-app/public/api/auth/accountsettings', {
         username: event.username, 
         phone: event.phonenumber,
         // role: 1,

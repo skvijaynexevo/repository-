@@ -20,7 +20,7 @@ import API from '../API/api'
 import nofoundresult from '../images/noresultfound.svg'
 import DroneImg from '../images/UploadFile.svg'
 
-const API_URL = 'http://localhost:1080/auth-app/public/api/auth';
+const API_URL = 'http://demo-nexevo.in/dn-auth-app/auth-app/public/api/auth';
 
 export default class HiringDorners extends React.Component {
  

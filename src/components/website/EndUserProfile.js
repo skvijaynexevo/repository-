@@ -94,7 +94,7 @@ export default function EndUserProfile(props) {
         }
       } 
 
-      axios.post('http://localhost:1080/auth-app/public/api/auth/profilesingle', {
+      axios.post('http://demo-nexevo.in/dn-auth-app/auth-app/public/api/auth/profilesingle', {
       user_id: props.match.params.id,
       }, config)
         .then(res => { 
@@ -106,7 +106,7 @@ export default function EndUserProfile(props) {
           }
         )   
         
-         const url = `http://localhost:1080/auth-app/public/api/auth/hiredstatus/${id}`;
+         const url = `http://demo-nexevo.in/dn-auth-app/auth-app/public/api/auth/hiredstatus/${id}`;
             axios.get(url, config).then(res => {     
             setHirestatus(res.data.success);  
           },
@@ -115,7 +115,7 @@ export default function EndUserProfile(props) {
             }
           )  
 
-          const urls = `http://localhost:1080/auth-app/public/api/auth/reportcheck/${id}`;
+          const urls = `http://demo-nexevo.in/dn-auth-app/auth-app/public/api/auth/reportcheck/${id}`;
           axios.get(urls, config).then(res => {     
           setReportstatus(res.data.success);  
         },
@@ -163,7 +163,7 @@ export default function EndUserProfile(props) {
                 Authorization: 'Bearer ' + localStorage.getItem('access_token')
             }
         }  
-        axios.post('http://localhost:1080/auth-app/public/api/auth/hireme', {user_id: props.match.params.id, name: event.name, message: event.message,}, config).then(response => {
+        axios.post('http://demo-nexevo.in/dn-auth-app/auth-app/public/api/auth/hireme', {user_id: props.match.params.id, name: event.name, message: event.message,}, config).then(response => {
               swal(response.data.message, {
                 icon: "success",
               });
@@ -198,7 +198,7 @@ export default function EndUserProfile(props) {
           }   
           
           
-          axios.post('http://localhost:1080/auth-app/public/api/auth/reportuser', {user_id: props.match.params.id, sender_id: '9', message: event.message,}, config).then(response => {
+          axios.post('http://demo-nexevo.in/dn-auth-app/auth-app/public/api/auth/reportuser', {user_id: props.match.params.id, sender_id: '9', message: event.message,}, config).then(response => {
                 swal(response.data.message, {
                   icon: "success",
                 });

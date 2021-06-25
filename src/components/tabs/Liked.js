@@ -17,7 +17,7 @@ import { Link , useParams } from 'react-router-dom';
 import DroneImg from '../images/drone-img.svg'
 import nofoundresult from '../images/noresultfound.svg' 
   
-const API_URL = 'http://localhost:1080/auth-app/public/api/auth';
+const API_URL = 'http://demo-nexevo.in/dn-auth-app/auth-app/public/api/auth';
 
 var videos = document.querySelectorAll(".thumbnail");
 for (var i = 0; i < videos.length; i++) {

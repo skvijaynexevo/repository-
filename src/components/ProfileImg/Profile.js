@@ -91,7 +91,7 @@ class Profile extends React.Component {
           Authorization: 'Bearer ' + localStorage.getItem('access_token')
         }
       }
-      axios.post('http://localhost:1080/auth-app/public/api/auth/updateprofileimage', {
+      axios.post('http://demo-nexevo.in/dn-auth-app/auth-app/public/api/auth/updateprofileimage', {
         profile: croppedImg, 
         user_id: this.state.user.id,
         // role: 1,

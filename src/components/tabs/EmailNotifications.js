@@ -64,7 +64,7 @@ export default function EmailNotifications() {
         Authorization: 'Bearer ' + localStorage.getItem('access_token')
       }
     }
-    axios.post('http://localhost:1080/auth-app/public/api/auth/emailsettings', {
+    axios.post('http://demo-nexevo.in/dn-auth-app/auth-app/public/api/auth/emailsettings', {
       news: event.checkedA, 
       privacy: event.checkedB,
       anyone_hire_me: event.checkedC,

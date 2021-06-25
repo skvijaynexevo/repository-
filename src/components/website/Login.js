@@ -67,7 +67,7 @@ const PasswordShow = () => {
     setLoading(true); 
     var element = document.getElementById("myDIV");
     element.className = element.className.replace(/\bmystyle\b/g, "");   
-    axios.post('http://localhost:1080/auth-app/public/api/auth/login', {
+    axios.post('http://demo-nexevo.in/dn-auth-app/auth-app/public/api/auth/login', {
       email: event.email,
       password: event.password
     }).then(res => {  

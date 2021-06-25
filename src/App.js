@@ -153,7 +153,7 @@
 
 
 import React, { Component , useState , useMemo, useLayoutEffect} from "react";   
-import { HashRouter , Switch , Redirect } from 'react-router-dom';
+import { HashRouter ,BrowserRouter,  Switch , Redirect } from 'react-router-dom';
 import Home from './components/website/Home';
 import Company from './components/website/Company';
 import User from './components/website/User';
@@ -255,7 +255,7 @@ class App extends React.Component {
 
     return( 
  
-<BrowserRouter>
+<BrowserRouter  forceRefresh={true}>
 <UserContext.Provider > 
   <Switch>
     <PublicRoute restricted={true} path="/login" component={Login}exact />
